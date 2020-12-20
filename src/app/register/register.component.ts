@@ -1,13 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { NgModule } from '@angular/core';
-import { NgForm } from '@angular/forms';
-
-import {
-  FormGroup,
-  FormBuilder,
-  Validators,
-  FormControl,
-} from '@angular/forms';
 /********************************************************************************************************** */
 
 import { AngularFireAuth } from '@angular/fire/auth';

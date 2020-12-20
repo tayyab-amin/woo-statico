@@ -1,13 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import { Router } from '@angular/router';
-// import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
-import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-} from '@angular/fire/firestore';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root',
@@ -47,6 +42,15 @@ export class AuthService {
         },
         (err) => reject(err)
       );
+    });
+  }
+  /************************************************************************************************ */
+  forgetPassword(email: any) {
+    return new Promise<any>((resolve, reject) => {
+      console.log('reset password');
+      console.log(email);
+      return this.afAuth.sendPasswordResetEmail(email);
+      debugger;
     });
   }
 }
