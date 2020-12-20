@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+@import "./assets/frontend/css/flexer.css";
+@import "./assets/frontend/css/bootstrap.min.css";
+@import "./assets/frontend/css/custom_style.css";
+@import "./assets/frontend/css/form_style.css";
+@import "./assets/frontend/css/style.css";
+@import "./assets/frontend/css/vendors_css.css";

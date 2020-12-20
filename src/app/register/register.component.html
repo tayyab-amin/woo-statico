@@ -1,0 +1,44 @@
+<main class="fx-row justify-center">
+  <section class="m-t-3 fx-col-4">
+    <div class="form-sect p-5 fx-col-12">
+      <form #registerForm="ngForm" (ngSubmit)="tryRegister(registerForm.value)">
+        <div class="form-group">
+          <h2 class="text-center m-b-3">Register</h2>
+          <input
+            [(ngModel)]="user.email"
+            name="email"
+            type="email"
+            class="form-control m-b-1"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Username"
+            required
+            ngModel
+          />
+
+          <input
+            [(ngModel)]="user.password"
+            name="password"
+            type="password"
+            class="form-control m-b-1"
+            id="exampleInputPassword1"
+            placeholder="Password"
+            ngModel
+            required
+          />
+          <input
+            [(ngModel)]="user.cnfrmpassword"
+            name="cnfrmpassword"
+            type="password"
+            class="form-control"
+            id="exampleInputPassword2"
+            placeholder="Confirm Password"
+            ngModel
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">NEXT</button>
+      </form>
+    </div>
+  </section>
+</main>
