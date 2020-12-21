@@ -49,22 +49,24 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   async tryRegister(value: any) {
-    this.authService.tryRegister(value).then(
-      (res) => {
-        this.errorMessage = '';
-        this.successMessage = 'Your account has been created. Please log in.';
-        setTimeout(() => {
-          this.successMessage = '';
-        }, 4000);
-      },
-      (err) => {
-        console.log(err);
-        this.errorMessage = err.message;
-        this.successMessage = '';
-        setTimeout(() => {
+    if (value.password === value.cnfrmpassword) {
+      this.authService.tryRegister(value).then(
+        (res) => {
           this.errorMessage = '';
-        }, 4000);
-      }
-    );
+          this.successMessage = 'Your account has been created. Please log in.';
+          setTimeout(() => {
+            this.successMessage = '';
+          }, 4000);
+        },
+        (err) => {
+          console.log(err);
+          this.errorMessage = err.message;
+          this.successMessage = '';
+          setTimeout(() => {
+            this.errorMessage = '';
+          }, 4000);
+        }
+      );
+    }
   }
 }

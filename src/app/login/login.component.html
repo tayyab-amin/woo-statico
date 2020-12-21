@@ -1,31 +1,79 @@
 <main class="fx-row justify-center">
   <section class="m-t-3 fx-col-4">
     <div class="form-sect p-5 fx-col-12">
-      <form #loginForm="ngForm" (ngSubmit)="trylogin(loginForm.value)">
+      <form
+        #loginForm="ngForm"
+        (ngSubmit)="trylogin(loginForm.value); loginForm.reset()"
+      >
         <div class="form-group">
           <h2 class="text-center m-b-3">Log In</h2>
-          <input
-            [(ngModel)]="user.email"
-            name="email"
-            type="email"
-            class="form-control m-b-1"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Username"
-            ngModel
-          />
-          <input
-            [(ngModel)]="user.password"
-            name="password"
-            type="password"
-            class="form-control"
-            id="exampleInputPassword1"
-            placeholder="Password"
-            ngModel
-          />
+          <div>
+            <input
+              [(ngModel)]="user.email"
+              name="email"
+              type="email"
+              class="form-control m-b-1"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Username"
+              ngModel
+              required
+            />
+            <!-- <div class="validation-errors">
+              <ng-container
+                *ngFor="let validation of validation_messages.email"
+              >
+                <div
+                  class="error-message"
+                  *ngIf="
+                    loginForm.get('email').hasError(validation.type) &&
+                    (loginForm.get('email').dirty ||
+                      loginForm.get('email').touched)
+                  "
+                >
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+            </div> -->
+          </div>
+          <div>
+            <input
+              [(ngModel)]="user.password"
+              name="password"
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Password"
+              ngModel
+              required
+            />
+            <!-- <div class="validation-errors">
+              <ng-container
+                *ngFor="let validation of validation_messages.password"
+              >
+                <div
+                  class="error-message"
+                  *ngIf="
+                    loginForm.get('password').hasError(validation.type) &&
+                    (loginForm.get('password').dirty ||
+                      loginForm.get('password').touched)
+                  "
+                >
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+            </div> -->
+          </div>
         </div>
         <a class="m-t-1" href="forget-password">Forgot password?</a>
-        <button type="submit" class="btn btn-primary">NEXT</button>
+        <br />
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="!loginForm.valid"
+        >
+          NEXT
+        </button>
         <div>
           Not a member,
           <a class="m-t-1" href="register">Click here for Registration</a>

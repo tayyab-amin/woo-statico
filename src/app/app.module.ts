@@ -4,7 +4,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
@@ -48,6 +48,7 @@ var firebaseConfig = {
     TabsModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
+    // FormBuilder,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
