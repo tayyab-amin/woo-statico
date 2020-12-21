@@ -6,3 +6,6 @@
 @import "./assets/frontend/css/form_style.css";
 @import "./assets/frontend/css/style.css";
 @import "./assets/frontend/css/vendors_css.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
