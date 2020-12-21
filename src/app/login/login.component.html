@@ -47,6 +47,7 @@
               ngModel
               required
             />
+
             <!-- <div class="validation-errors">
               <ng-container
                 *ngFor="let validation of validation_messages.password"
@@ -65,6 +66,10 @@
             </div> -->
           </div>
         </div>
+        <div class="error">
+          {{ errorMessage }}
+        </div>
+        <br />
         <a class="m-t-1" href="forget-password">Forgot password?</a>
         <br />
         <button

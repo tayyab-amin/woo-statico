@@ -8,6 +8,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
   providedIn: 'root',
 })
 export class AuthService {
+  errorMessage: string = '';
   // user: any;
   constructor(
     public afAuth: AngularFireAuth,
@@ -40,17 +41,19 @@ export class AuthService {
           console.log('res', res);
           this.router.navigate(['/dashboard']);
         },
-        (err) => reject(err)
+        (err) => {
+          // console.error(err.message);
+          // this.errorMessage = err.message;
+          // console.log(this.errorMessage);
+          return reject(err);
+        }
       );
     });
   }
   /************************************************************************************************ */
   forgetPassword(email: any) {
     return new Promise<any>((resolve, reject) => {
-      console.log('reset password');
-      console.log(email);
       return this.afAuth.sendPasswordResetEmail(email);
-      debugger;
     });
   }
 }

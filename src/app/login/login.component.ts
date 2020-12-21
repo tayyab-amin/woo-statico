@@ -55,9 +55,8 @@ export class LoginComponent implements OnInit {
     public afs: AngularFirestore,
     public afAuth: AngularFireAuth,
     public router: Router,
-    public authService: AuthService
-  ) // private formBuilder: FormBuilder
-  {}
+    public authService: AuthService // private formBuilder: FormBuilder
+  ) {}
 
   ngOnInit(): void {
     // this.loginForm = this.formBuilder.group({
