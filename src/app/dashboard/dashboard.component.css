@@ -1,6 +1,12 @@
+.close {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* * {
   box-sizing: border-box;
 }
+
 
 tabset {
   display: flex;
