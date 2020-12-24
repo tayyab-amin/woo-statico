@@ -38,6 +38,7 @@
     >
   </div>
 </aside>
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
 <main>
   <section id="info" class="fx-row justify-center fx-nowrap">
     <div id="bar-chart" class="fx-col-5">
@@ -92,6 +93,7 @@
       </div>
     </div>
   </section>
+  <!-- ------------------------------------------------------------------------------------------------------------------------ -->
   <section id="revenue" class="fx-row fx-nowrap align-fx-start">
     <div class="report p-0">
       <img
@@ -99,166 +101,129 @@
         src="https://www.primefaces.org/sapphire-ng/assets/layout/images/dashboard/asset-profile.jpg"
         alt=""
       />
-      <nav>
-        <div class="nav nav-tabs text-center" id="nav-tab" role="tablist">
-          <a
-            class="nav-item nav-link fx-col-4 active"
-            id="nav-home-tab"
-            data-toggle="tab"
-            href="#nav-home"
-            role="tab"
-            aria-controls="nav-home"
-            aria-selected="true"
-            >Day</a
-          >
-          <a
-            class="nav-item nav-link fx-col-4"
-            id="nav-profile-tab"
-            data-toggle="tab"
-            href="#nav-profile"
-            role="tab"
-            aria-controls="nav-profile"
-            aria-selected="false"
-            >Week</a
-          >
-          <a
-            class="nav-item nav-link fx-col-4"
-            id="nav-contact-tab"
-            data-toggle="tab"
-            href="#nav-contact"
-            role="tab"
-            aria-controls="nav-contact"
-            aria-selected="false"
-            >Month</a
-          >
-        </div>
-      </nav>
-      <div class="tab-content m-b-2" id="nav-tabContent">
-        <div
-          class="tab-pane fade show active"
-          id="nav-home"
-          role="tabpanel"
-          aria-labelledby="nav-home-tab"
-        >
-          <div class="fx-row m-t-3">
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-order"></div>
-              <div class="userprofile-status">ORDERS</div>
-              <div class="userprofile-value">190</div>
+      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink>Day</a>
+          <ng-template ngbNavContent>
+            <div class="fx-row m-t-3">
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-order"></div>
+                <div class="userprofile-status">ORDERS</div>
+                <div class="userprofile-value">190</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-profits"></div>
+                <div class="userprofile-status">PROFITS</div>
+                <div class="userprofile-value">$64</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-revenue"></div>
+                <div class="userprofile-status">REVENUE</div>
+                <div class="userprofile-value">$28</div>
+              </div>
             </div>
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-profits"></div>
-              <div class="userprofile-status">PROFITS</div>
-              <div class="userprofile-value">$64</div>
+            <div class="fx-row m-t-3">
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-expenses"></div>
+                <div class="userprofile-status">ADWORD</div>
+                <div class="userprofile-value">$190</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-expenses"></div>
+                <div class="userprofile-status">FACEBOOK</div>
+                <div class="userprofile-value">$64</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-ship"></div>
+                <div class="userprofile-status">SHIPPING</div>
+                <div class="userprofile-value">28</div>
+              </div>
             </div>
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-revenue"></div>
-              <div class="userprofile-status">REVENUE</div>
-              <div class="userprofile-value">$28</div>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink>Week</a>
+          <ng-template ngbNavContent>
+            <div class="fx-row m-t-3">
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-order"></div>
+                <div class="userprofile-status">ORDERS</div>
+                <div class="userprofile-value">190</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-profits"></div>
+                <div class="userprofile-status">PROFITS</div>
+                <div class="userprofile-value">$64</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-revenue"></div>
+                <div class="userprofile-status">REVENUE</div>
+                <div class="userprofile-value">$28</div>
+              </div>
             </div>
-          </div>
-          <div class="fx-row m-t-3">
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-expenses"></div>
-              <div class="userprofile-status">ADWORD</div>
-              <div class="userprofile-value">$190</div>
+            <div class="fx-row m-t-3">
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-expenses"></div>
+                <div class="userprofile-status">ADWORD</div>
+                <div class="userprofile-value">$190</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-expenses"></div>
+                <div class="userprofile-status">FACEBOOK</div>
+                <div class="userprofile-value">$64</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-ship"></div>
+                <div class="userprofile-status">SHIPPING</div>
+                <div class="userprofile-value">28</div>
+              </div>
             </div>
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-expenses"></div>
-              <div class="userprofile-status">FACEBOOK</div>
-              <div class="userprofile-value">$64</div>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+          <a ngbNavLink>Month</a>
+          <ng-template ngbNavContent>
+            <div class="fx-row m-t-3">
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-order"></div>
+                <div class="userprofile-status">ORDERS</div>
+                <div class="userprofile-value">190</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-profits"></div>
+                <div class="userprofile-status">PROFITS</div>
+                <div class="userprofile-value">$64</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-revenue"></div>
+                <div class="userprofile-status">REVENUE</div>
+                <div class="userprofile-value">$28</div>
+              </div>
             </div>
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-ship"></div>
-              <div class="userprofile-status">SHIPPING</div>
-              <div class="userprofile-value">28</div>
+            <div class="fx-row m-t-3">
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-expenses"></div>
+                <div class="userprofile-status">ADWORD</div>
+                <div class="userprofile-value">$190</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-expenses"></div>
+                <div class="userprofile-status">FACEBOOK</div>
+                <div class="userprofile-value">$64</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-ship"></div>
+                <div class="userprofile-status">SHIPPING</div>
+                <div class="userprofile-value">28</div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="nav-profile"
-          role="tabpanel"
-          aria-labelledby="nav-profile-tab"
-        >
-          <div class="fx-row m-t-3">
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-order"></div>
-              <div class="userprofile-status">ORDERS</div>
-              <div class="userprofile-value">190</div>
-            </div>
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-profits"></div>
-              <div class="userprofile-status">PROFITS</div>
-              <div class="userprofile-value">$64</div>
-            </div>
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-revenue"></div>
-              <div class="userprofile-status">REVENUE</div>
-              <div class="userprofile-value">$28</div>
-            </div>
-          </div>
-          <div class="fx-row m-t-3">
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-expenses"></div>
-              <div class="userprofile-status">ADWORD</div>
-              <div class="userprofile-value">$190</div>
-            </div>
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-expenses"></div>
-              <div class="userprofile-status">FACEBOOK</div>
-              <div class="userprofile-value">$64</div>
-            </div>
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-ship"></div>
-              <div class="userprofile-status">SHIPPING</div>
-              <div class="userprofile-value">28</div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="nav-contact"
-          role="tabpanel"
-          aria-labelledby="nav-contact-tab"
-        >
-          <div class="fx-row m-t-3">
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-order"></div>
-              <div class="userprofile-status">ORDERS</div>
-              <div class="userprofile-value">190</div>
-            </div>
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-profits"></div>
-              <div class="userprofile-status">PROFITS</div>
-              <div class="userprofile-value">$64</div>
-            </div>
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-revenue"></div>
-              <div class="userprofile-status">REVENUE</div>
-              <div class="userprofile-value">$28</div>
-            </div>
-          </div>
-          <div class="fx-row m-t-3">
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-expenses"></div>
-              <div class="userprofile-status">ADWORD</div>
-              <div class="userprofile-value">$190</div>
-            </div>
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-expenses"></div>
-              <div class="userprofile-status">FACEBOOK</div>
-              <div class="userprofile-value">$64</div>
-            </div>
-            <div class="fx-col-4 text-center">
-              <div class="userprofile-circle crcle-ship"></div>
-              <div class="userprofile-status">SHIPPING</div>
-              <div class="userprofile-value">28</div>
-            </div>
-          </div>
-        </div>
-      </div>
+          </ng-template>
+        </li>
+      </ul>
+
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
     </div>
+    <!-- ------------------------------------------------------------------------------- -->
     <div class="fx-col-8 p-0">
       <div class="box line-chart">
         <div class="box-body">
@@ -272,7 +237,7 @@
   </section>
 </main>
 
-<!-- ------------------------------ MoDal Content------------------------------------------------ -->
+<!-- ------------------------------ Modal Content------------------------------------------------ -->
 <ng-template #content let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">Add Website</h4>

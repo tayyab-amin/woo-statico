@@ -3,100 +3,11 @@
   justify-content: flex-end;
 }
 
-/* * {
-  box-sizing: border-box;
+#add-butn {
+  color: white;
 }
 
-
-tabset {
+.nav-tabs {
   display: flex;
-  justify-content: center;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-}
-
-.card {
-  background: #fff;
-  border: transparent;
-  height: 100%;
-  margin: 1rem;
-  position: relative;
-  width: 100%;
-  border-radius: 2.5%;
-  display: flex;
-}
-
-#orders {
-  margin: 0 auto 0.5em;
-  background: #fff;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: solid;
-  color: #aaa;
-  border-color: #ff4500;
-}
-
-#profits {
-  margin: 0 auto 0.5em;
-  background: #fff;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: solid;
-  color: #aaa;
-  border-color: #689f38;
-}
-
-#revenue {
-  margin: 0 auto 0.5em;
-  background: #fff;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: solid;
-  color: #aaa;
-  border-color: #389f99;
-}
-
-#adword {
-  margin: 0 auto 0.5em;
-  background: #fff;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: solid;
-  color: #aaa;
-  border-color: #ee1044;
-}
-
-#facebook {
-  margin: 0 auto 0.5em;
-  background: #fff;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: solid;
-  color: #aaa;
-  border-color: #dd1044;
-}
-
-#shipping {
-  margin: 0 auto 0.5em;
-  background: #fff;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: solid;
-  color: #aaa;
-  border-color: #ff8f00;
-}
-
-.justify {
-  display: flex;
-  flex-direction: row;
   justify-content: space-around;
-} */
+}
