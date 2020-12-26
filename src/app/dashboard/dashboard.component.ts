@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestore } from '@angular/fire/firestore';
 
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import {
+  NgbModal,
+  NgbNavModule,
+  ModalDismissReasons,
+} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +14,11 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  constructor(private modalService: NgbModal) {}
+  domain: any;
+  apiKey: any;
+  websiteName: any;
+  apiSecret: any;
+  constructor(private modalService: NgbModal, private afs: AngularFirestore) {}
 
   /****************************************************************************************************************** */
   open(content: any) {
@@ -16,6 +26,17 @@ export class DashboardComponent implements OnInit {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' });
   }
   /********************************************************************************************************** */
+  tryAddAPI(value: any) {
+    const id = value.devicename;
+    const ref = this.afs.collection('Domains').doc(id);
+    ref.set({
+      websiteName: value.websiteName,
+      domain: value.domain,
+      apiKey: value.apiKey,
+      apiSecret: value.apiSecret,
+    });
+    console.log(value);
+  }
 
   ngOnInit(): void {}
 }

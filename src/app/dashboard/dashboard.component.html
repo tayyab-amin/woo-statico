@@ -101,129 +101,144 @@
         src="https://www.primefaces.org/sapphire-ng/assets/layout/images/dashboard/asset-profile.jpg"
         alt=""
       />
-      <nav>
-        <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
-          <li [ngbNavItem]="1">
-            <a ngbNavLink>Day</a>
-            <ng-template ngbNavContent>
-              <div class="fx-row m-t-3">
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-order"></div>
-                  <div class="userprofile-status">ORDERS</div>
-                  <div class="userprofile-value">190</div>
-                </div>
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-profits"></div>
-                  <div class="userprofile-status">PROFITS</div>
-                  <div class="userprofile-value">$64</div>
-                </div>
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-revenue"></div>
-                  <div class="userprofile-status">REVENUE</div>
-                  <div class="userprofile-value">$28</div>
-                </div>
+      <!-- <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel title="Simple">
+          <ng-template ngbPanelContent>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+            single-origin coffee nulla assumenda shoreditch et. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+            occaecat craft beer farm-to-table, raw denim aesthetic synth
+            nesciunt you probably haven't heard of them accusamus labore
+            sustainable VHS.
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion> -->
+
+      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink>Day</a>
+          <ng-template ngbNavContent>
+            <div class="fx-row m-t-3">
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-order"></div>
+                <div class="userprofile-status">ORDERS</div>
+                <div class="userprofile-value">190</div>
               </div>
-              <div class="fx-row m-t-3">
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-expenses"></div>
-                  <div class="userprofile-status">ADWORD</div>
-                  <div class="userprofile-value">$190</div>
-                </div>
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-expenses"></div>
-                  <div class="userprofile-status">FACEBOOK</div>
-                  <div class="userprofile-value">$64</div>
-                </div>
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-ship"></div>
-                  <div class="userprofile-status">SHIPPING</div>
-                  <div class="userprofile-value">28</div>
-                </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-profits"></div>
+                <div class="userprofile-status">PROFITS</div>
+                <div class="userprofile-value">$64</div>
               </div>
-            </ng-template>
-          </li>
-          <li [ngbNavItem]="2">
-            <a ngbNavLink>Two</a>
-            <ng-template ngbNavContent>
-              <div class="fx-row m-t-3">
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-order"></div>
-                  <div class="userprofile-status">ORDERS</div>
-                  <div class="userprofile-value">190</div>
-                </div>
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-profits"></div>
-                  <div class="userprofile-status">PROFITS</div>
-                  <div class="userprofile-value">$64</div>
-                </div>
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-revenue"></div>
-                  <div class="userprofile-status">REVENUE</div>
-                  <div class="userprofile-value">$28</div>
-                </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-revenue"></div>
+                <div class="userprofile-status">REVENUE</div>
+                <div class="userprofile-value">$28</div>
               </div>
-              <div class="fx-row m-t-3">
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-expenses"></div>
-                  <div class="userprofile-status">ADWORD</div>
-                  <div class="userprofile-value">$190</div>
-                </div>
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-expenses"></div>
-                  <div class="userprofile-status">FACEBOOK</div>
-                  <div class="userprofile-value">$64</div>
-                </div>
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-ship"></div>
-                  <div class="userprofile-status">SHIPPING</div>
-                  <div class="userprofile-value">28</div>
-                </div>
+            </div>
+            <div class="fx-row m-t-3">
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-expenses"></div>
+                <div class="userprofile-status">ADWORD</div>
+                <div class="userprofile-value">$190</div>
               </div>
-            </ng-template>
-          </li>
-          <li [ngbNavItem]="3">
-            <a ngbNavLink>Three</a>
-            <ng-template ngbNavContent>
-              <div class="fx-row m-t-3">
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-order"></div>
-                  <div class="userprofile-status">ORDERS</div>
-                  <div class="userprofile-value">190</div>
-                </div>
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-profits"></div>
-                  <div class="userprofile-status">PROFITS</div>
-                  <div class="userprofile-value">$64</div>
-                </div>
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-revenue"></div>
-                  <div class="userprofile-status">REVENUE</div>
-                  <div class="userprofile-value">$28</div>
-                </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-expenses"></div>
+                <div class="userprofile-status">FACEBOOK</div>
+                <div class="userprofile-value">$64</div>
               </div>
-              <div class="fx-row m-t-3">
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-expenses"></div>
-                  <div class="userprofile-status">ADWORD</div>
-                  <div class="userprofile-value">$190</div>
-                </div>
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-expenses"></div>
-                  <div class="userprofile-status">FACEBOOK</div>
-                  <div class="userprofile-value">$64</div>
-                </div>
-                <div class="fx-col-4 text-center">
-                  <div class="userprofile-circle crcle-ship"></div>
-                  <div class="userprofile-status">SHIPPING</div>
-                  <div class="userprofile-value">28</div>
-                </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-ship"></div>
+                <div class="userprofile-status">SHIPPING</div>
+                <div class="userprofile-value">28</div>
               </div>
-            </ng-template>
-          </li>
-        </ul>
-        
-        <div [ngbNavOutlet]="nav" class="mt-2"></div>
-      </div>
+            </div>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink>Week</a>
+          <ng-template ngbNavContent>
+            <div class="fx-row m-t-3">
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-order"></div>
+                <div class="userprofile-status">ORDERS</div>
+                <div class="userprofile-value">190</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-profits"></div>
+                <div class="userprofile-status">PROFITS</div>
+                <div class="userprofile-value">$64</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-revenue"></div>
+                <div class="userprofile-status">REVENUE</div>
+                <div class="userprofile-value">$28</div>
+              </div>
+            </div>
+            <div class="fx-row m-t-3">
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-expenses"></div>
+                <div class="userprofile-status">ADWORD</div>
+                <div class="userprofile-value">$190</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-expenses"></div>
+                <div class="userprofile-status">FACEBOOK</div>
+                <div class="userprofile-value">$64</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-ship"></div>
+                <div class="userprofile-status">SHIPPING</div>
+                <div class="userprofile-value">28</div>
+              </div>
+            </div>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+          <a ngbNavLink>Month</a>
+          <ng-template ngbNavContent>
+            <div class="fx-row m-t-3">
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-order"></div>
+                <div class="userprofile-status">ORDERS</div>
+                <div class="userprofile-value">190</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-profits"></div>
+                <div class="userprofile-status">PROFITS</div>
+                <div class="userprofile-value">$64</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-revenue"></div>
+                <div class="userprofile-status">REVENUE</div>
+                <div class="userprofile-value">$28</div>
+              </div>
+            </div>
+            <div class="fx-row m-t-3">
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-expenses"></div>
+                <div class="userprofile-status">ADWORD</div>
+                <div class="userprofile-value">$190</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-expenses"></div>
+                <div class="userprofile-status">FACEBOOK</div>
+                <div class="userprofile-value">$64</div>
+              </div>
+              <div class="fx-col-4 text-center">
+                <div class="userprofile-circle crcle-ship"></div>
+                <div class="userprofile-status">SHIPPING</div>
+                <div class="userprofile-value">28</div>
+              </div>
+            </div>
+          </ng-template>
+        </li>
+      </ul>
+
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
     </div>
     <!-- ------------------------------------------------------------------------------- -->
     <div class="fx-col-8 p-0">
@@ -253,28 +268,62 @@
     </button>
   </div>
   <div class="modal-body">
-    <form>
+    <form
+      #apiForm="ngForm"
+      (ngSubmit)="tryAddAPI(apiForm.value); apiForm.reset()"
+    >
       <div class="form-group">
         <label for="recipient-name" class="col-form-label">Website Name:</label>
-        <input type="text" class="form-control" id="recipient-name" />
+        <input
+          [(ngModel)]="websiteName"
+          name="websiteName"
+          type="text"
+          class="form-control"
+          id="recipient-name"
+          required
+        />
       </div>
       <div class="form-group">
         <label for="recipient-name" class="col-form-label">Domain:</label>
-        <input type="text" class="form-control" id="domain-name" />
+        <input
+          [(ngModel)]="domain"
+          name="domain"
+          type="text"
+          class="form-control"
+          id="domain-name"
+          required
+        />
       </div>
       <div class="form-group">
         <label for="recipient-name" class="col-form-label">API Key:</label>
-        <input type="text" class="form-control" id="api-key" />
+        <input
+          [(ngModel)]="apiKey"
+          name="apiKey"
+          type="text"
+          class="form-control"
+          id="api-key"
+          required
+        />
       </div>
       <div class="form-group">
         <label for="recipient-name" class="col-form-label">API Secret:</label>
-        <input type="text" class="form-control" id="api-secret" />
+        <input
+          [(ngModel)]="apiSecret"
+          name="apiSecret"
+          type="text"
+          class="form-control"
+          id="api-secret"
+          required
+        />
       </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!apiForm.valid">
+        Add
+      </button>
     </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-primary">Add</button>
+    <p>Text for Footer></p>
+    <!-- <button type="button" class="btn btn-danger">Cancel</button> -->
   </div>
 </ng-template>
 <!-- ----------------------------------------------------------------------------------------------- -->
-
