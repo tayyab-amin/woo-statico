@@ -14,6 +14,7 @@ import {
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
+  active = 1;
   domain: any;
   apiKey: any;
   websiteName: any;
